@@ -17,7 +17,7 @@ int schrodinger(int n, double rho_min, double rho_max, double* egenverdier, doub
         }
     }
     A[0][0] = 2*h2invers + V->eval(h);
-    A[n-1][n-1] = 2*h2invers + V->eval((n-1)*h);
+    A[n-1][n-1] = 2*h2invers + V->eval(n*h);
     A[0][1] = -h2invers;
     A[n-1][n-2] = -h2invers;
     for(i=1; i<n-1; i++){
